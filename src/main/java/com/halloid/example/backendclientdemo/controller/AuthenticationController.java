@@ -1,6 +1,7 @@
 package com.halloid.example.backendclientdemo.controller;
 
 import com.halloid.example.backendclientdemo.service.TokenService;
+import com.halloid.sdk.model.AuthenticationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +23,9 @@ public class AuthenticationController {
     }
 
     @GetMapping("{token}/verify")
-    public ResponseEntity<Boolean> verifyToken(@PathVariable String token) {
-        Boolean isValidToken = tokenService.validateToken(token).getTokenVerified();
-        return ResponseEntity.ok(isValidToken);
+    public ResponseEntity<AuthenticationResponse> verifyToken(@PathVariable String token) {
+        AuthenticationResponse authPayload = tokenService.validateToken(token);
+        return ResponseEntity.ok(authPayload);
     }
 
 }
