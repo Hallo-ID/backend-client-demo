@@ -4,6 +4,12 @@ server:
 halloId:
   client:
     id: <CLIENT_ID>
-    privateKey: <PRIVATE_KEY>
+    privateKey: |
+      -----BEGIN PRIVATE KEY-----
+        <YOUR PUBLIC KEY>
+      -----END PRIVATE KEY-----
 
-  publicKey: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAs21q8GJSsqDsbvMOFAMzVyxZ9EZwBomuzcav2WT/o1nAo2c7otq0bKc+GZzKkMZNxTDQ5kwK6RE5OXRC8Q/mGyD6Gel4CVkfPCi8vMamI6bUP7sAQgOADbHoH3BHgfVBF9cnfRAjzjK+eq0jKDigRGC8FLUq0MA/rSPXLrmtFOU+KSXxQHYdNoy81Mvd6F1jf5Pjbe6Vz0Gc4HpsubcsaiBWD+MHJwUBQqGZ/RH+mTNQiWFq01wGlGRXkNf4N7eo/79+ivkcgcIuCSsGgorqdrOiXUH+O/jKg41Wigwo5gYANIU7QpYCoH+/ZhidsWkhadhqKgWawMhu6Ff9VPFLawIDAQAB
+  publicKey: |
+    -----BEGIN PUBLIC KEY-----
+        <HALLOID PUBLIC KEY>
+    -----END PUBLIC KEY-----
